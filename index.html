@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabrielli Zonta | Psicóloga - TCC</title>
+    <meta name="description" content="Psicoterapia baseada em evidências. Terapia Cognitivo Comportamental com Gabrielli Zonta.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#fbf7ff',
+                            100: '#f5eeff',
+                            500: '#b794f4',
+                            600: '#9f7aea', // Roxo principal
+                            700: '#805ad5',
+                            900: '#44337a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Estilos adicionais para transições suaves */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-primary-50 selection:bg-primary-100">
+
+    <header id="header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary-900 tracking-tight">
+                Gabrielli<span class="text-primary-600">Zonta</span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="text-gray-600 hover:text-primary-600 font-medium transition">Início</a>
+                <a href="#tcc" class="text-gray-600 hover:text-primary-600 font-medium transition">O que é TCC</a>
+                <a href="#atuacao" class="text-gray-600 hover:text-primary-600 font-medium transition">Atuação</a>
+                <a href="#sobre" class="text-gray-600 hover:text-primary-600 font-medium transition">Sobre mim</a>
+                <a href="#faq" class="text-gray-600 hover:text-primary-600 font-medium transition">Dúvidas</a>
+                <a href="#sobre" class="px-5 py-2.5 bg-primary-600 text-white rounded-full font-medium hover:bg-primary-700 transition shadow-md hover:shadow-lg">
+                    Agendar Consulta
+                </a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-8 h-8 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-lg md:hidden flex-col items-center py-8 space-y-6 border-t border-gray-100">
+            <a href="#home" class="mobile-link text-lg text-gray-800 font-medium">Início</a>
+            <a href="#tcc" class="mobile-link text-lg text-gray-800 font-medium">O que é TCC</a>
+            <a href="#atuacao" class="mobile-link text-lg text-gray-800 font-medium">Atuação</a>
+            <a href="#sobre" class="mobile-link text-lg text-gray-800 font-medium">Sobre mim</a>
+            <a href="#faq" class="mobile-link text-lg text-gray-800 font-medium">Dúvidas</a>
+            <a href="#sobre" class="mobile-link px-8 py-3 bg-primary-600 text-white rounded-full font-medium shadow-md">
+                Agendar Consulta
+            </a>
+        </div>
+    </header>
+
+    <section id="home" class="min-h-screen pt-24 pb-12 flex items-center relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-purple-100">
+        <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2 text-center md:text-left fade-in-up">
+                <span class="inline-block py-1 px-3 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-4">
+                    Psicologia Clínica & TCC
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                    Reencontre seu equilíbrio e <span class="text-primary-600">bem-estar emocional.</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Um espaço seguro e acolhedor para você lidar com suas angústias. Atendimento online e presencial focado na Terapia Cognitivo Comportamental.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#sobre" class="px-8 py-4 bg-primary-600 text-white rounded-full font-semibold hover:bg-primary-700 transition shadow-lg text-center">
+                        Marcar Consulta
+                    </a>
+                    <a href="#sobre" class="px-8 py-4 bg-white text-primary-700 border border-primary-200 rounded-full font-semibold hover:bg-gray-50 transition shadow-sm text-center">
+                        Conheça meu trabalho
+                    </a>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-1/2 flex justify-center relative fade-in-up" style="animation-delay: 0.2s;">
+                <div class="absolute top-0 right-10 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                <div class="absolute -bottom-8 left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                
+                
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Psicóloga Gabrielli Zonta" 
+                     class="relative w-4/5 md:w-3/4 rounded-2xl shadow-2xl object-cover aspect-[3/4] z-10 border-4 border-white">
+            </div>
+        </div>
+    </section>
+
+    <section id="tcc" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    
+                    <img src="https://images.unsplash.com/photo-1551847677-dc82d764e1eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Ilustração TCC" 
+                         class="rounded-xl shadow-lg w-full object-cover h-80">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">O que é a Terapia Cognitivo Comportamental?</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        A TCC é uma abordagem da psicoterapia estruturada, diretiva e focada no presente. Ela parte do princípio de que não são as situações em si que nos afetam, mas sim <strong>a forma como interpretamos essas situações</strong>.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Juntos, trabalhamos para identificar padrões de pensamentos disfuncionais que geram sofrimento e desenvolvemos estratégias práticas para modificá-los, promovendo mudanças reais no comportamento e nas emoções.
+                    </p>
+                    
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mr-3 text-sm">✓</span>
+                            Focada na resolução de problemas
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mr-3 text-sm">✓</span>
+                            Baseada em evidências científicas
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mr-3 text-sm">✓</span>
+                            Tratamento colaborativo
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="atuacao" class="py-20 bg-primary-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Como posso te ajudar?</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-12">
+                A terapia oferece suporte para diversas demandas emocionais. Veja algumas das áreas onde atuo com maior frequência.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 border-b-4 border-primary-600">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Ansiedade</h3>
+                    <p class="text-gray-600 text-sm">Tratamento para ansiedade generalizada, crises de pânico, fobias e ansiedade social.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 border-b-4 border-primary-600">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Depressão</h3>
+                    <p class="text-gray-600 text-sm">Suporte para recuperar a vitalidade, o prazer nas atividades diárias e a esperança.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 border-b-4 border-primary-600">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Relacionamentos</h3>
+                    <p class="text-gray-600 text-sm">Desenvolvimento de habilidades sociais, assertividade e resolução de conflitos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Consultório" 
+                         class="rounded-xl shadow-lg w-full object-cover h-96">
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col items-start text-center gap-6">
+                    <div>
+                        <h3 class="text-sm font-bold text-primary-600 uppercase text-left tracking-widest mb-2">Sobre mim</h3>
+                        <h2 class="text-3xl font-bold text-gray-900">Gabrielli Zonta</h2>
+                    </div>
+                    
+                    <div class="flex flex-col gap-4 items-start text-left">
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Olá! Sou psicóloga clínica graduada pela [Universidade], com especialização em Terapia Cognitivo Comportamental. Minha missão é oferecer um ambiente livre de julgamentos, onde você possa se sentir à vontade para explorar suas questões mais profundas.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Acredito que cada ser humano tem um potencial único de transformação. Através da TCC, ajudo meus pacientes a construir ferramentas para lidar com os desafios da vida de forma mais autônoma e saudável.
+                        </p>
+                    </div>
+
+                    <div class="bg-primary-50 p-4 rounded-lg border-l-4 border-primary-600">
+                        <p class="text-primary-800 font-medium">CRP: 00/00000</p>
+                    </div>
+
+                     <div class="w-full flex flex-col text-center sm:items-start md:items-start gap-4">
+                        <h4 class="text-2xl font-extrabold text-primary-700">Entre em contato</h4>
+                        <div class="flex flex-row items-center justify-center sm:items-start gap-4">
+                            <a href="https://wa.me/5554984466353?text=Olá Gabrielli Zonta, gostaria de agendar uma consulta." class="flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full font-semibold shadow transition" target="_blank">
+                                <img src="/whatsapp.svg" alt="Whatsapp icon" class="w-6 h-6 filter invert"> WhatsApp
+                            </a>
+                            <a href="mailto:contato@gabriellizontapsico.com" class="flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-semibold shadow transition">
+                                <img src="/envelope.svg" alt="Envelope icon" class="w-6 h-6 filter invert"> E-mail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Perguntas Frequentes</h2>
+            
+            <div class="space-y-4">
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="accordion-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-gray-800">Você atende por convênio?</span>
+                        <span class="text-primary-600 text-xl transform transition-transform">+</span>
+                    </button>
+                    <div class="accordion-content hidden px-6 pb-4 text-gray-600">
+                        Atualmente trabalho apenas com atendimento particular. No entanto, forneço recibo para que você possa solicitar o reembolso junto ao seu plano de saúde, caso essa modalidade esteja disponível no seu contrato.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="accordion-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-gray-800">Como funciona o atendimento online?</span>
+                        <span class="text-primary-600 text-xl transform transition-transform">+</span>
+                    </button>
+                    <div class="accordion-content hidden px-6 pb-4 text-gray-600">
+                        O atendimento online ocorre via videochamada (Google Meet ou WhatsApp), com a mesma duração e sigilo da sessão presencial. É necessário apenas que você esteja em um local privado e com boa conexão de internet.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="accordion-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-gray-800">Quanto tempo dura a sessão?</span>
+                        <span class="text-primary-600 text-xl transform transition-transform">+</span>
+                    </button>
+                    <div class="accordion-content hidden px-6 pb-4 text-gray-600">
+                        Cada sessão tem duração aproximada de 50 minutos. A frequência é definida na primeira consulta, geralmente sendo semanal no início do tratamento.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 gap-16 sm:gap-4">
+            <div class="w-full flex flex-col items-center justify-center sm:items-start gap-4">
+                <a href="#" class="text-2xl font-bold text-primary-700 tracking-tight">
+                    Gabrielli<span class="text-primary-500">Zonta</span>
+                </a>
+                <div class="text-gray-400 font-medium">CRP: 00/00000</div>
+            </div>
+            <div class="w-full flex flex-row gap-12 sm:gap-8 items-center justify-center">
+                <a href="https://www.instagram.com/gabriellizontapsico/" target="_blank">
+                    <img src="/instagram.svg" alt="Instagram icon" class="w-6 h-6 filter invert">
+                </a>
+                <a href="https://www.facebook.com/gabriellizontapsico/" target="_blank">
+                    <img src="/facebook.svg" alt="Facebook icon" class="w-6 h-6 filter invert">
+                </a>
+                <a href="https://wa.me/5554984466353?text=Olá Gabrielli Zonta, gostaria de agendar uma consulta." target="_blank">
+                    <img src="/whatsapp.svg" alt="Whatsapp icon" class="w-6 h-6 filter invert">
+                </a>
+                <a href="mailto:contato@gabriellizontapsico.com" class="">
+                    <img src="/envelope.svg" alt="Envelope icon" class="w-6 h-6 filter invert">
+                </a>
+            </div>
+            <div class="flex flex-col w-full items-center sm:items-end">
+                <address class="text-gray-400 text-sm mt-4">
+                    <svg class="w-5 h-5 inline-block mr-1 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    Rua Exemplo, 123 - Centro, Cidade/UF
+                </address>
+            </div>
+        </div>
+        <div class="w-full text-center flex flex-col gap-2 mt-12">
+            <p class="text-sm text-gray-500">© <span id="current-year"></span> Gabrielli Zonta. Todos os direitos reservados.</p>
+            <p class="text-sm text-gray-500">Criado por <a href="https://github.com/DevSamuelBarbosa" target="_blank" class="text-gray-400 hover:underline">Samuel Barbosa</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica do Header (Efeito Blur ao rolar)
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm');
+                header.classList.remove('bg-transparent', 'py-4');
+                header.classList.add('py-2');
+            } else {
+                header.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-2');
+                header.classList.add('bg-transparent', 'py-4');
+            }
+        });
+
+        // Menu Mobile Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        // Fechar menu mobile ao clicar em um link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // FAQ Accordion Logic
+        const accordions = document.querySelectorAll('.accordion-btn');
+
+        accordions.forEach(acc => {
+            acc.addEventListener('click', function() {
+                // Toggle o conteúdo atual
+                const content = this.nextElementSibling;
+                content.classList.toggle('hidden');
+                
+                // Rotaciona o ícone +
+                const icon = this.querySelector('span:last-child');
+                if (content.classList.contains('hidden')) {
+                    icon.classList.remove('rotate-45');
+                    this.classList.remove('text-primary-600');
+                } else {
+                    icon.classList.add('rotate-45');
+                    this.classList.add('text-primary-600');
+                }
+            });
+        });
+
+        // Atualiza o ano atual no rodapé
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
